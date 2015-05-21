@@ -30,7 +30,7 @@ from kano_updater.progress import DummyProgress
 
 
 UPDATER_CACHE_DIR = "/var/cache/kano-updater/"
-STATUS_FILE = UPDATER_CACHE_DIR + "status"
+STATUS_FILE = os.path.join(UPDATER_CACHE_DIR, "status")
 
 REPO_SERVER = 'repo.kano.me'
 PID_FILE = '/var/run/kano-updater.pid'

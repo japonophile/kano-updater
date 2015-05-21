@@ -134,8 +134,11 @@ class PreUpdate(Scenarios):
 
     def beta_111_to_beta_120(self):
         purge("kano-unlocker")
-        repo_url = "deb http://mirrordirector.raspbian.org/raspbian/ wheezy main contrib non-free rpi"
-        write_file_contents('/etc/apt/sources.list', repo_url + '\n')
+
+        repo_url = "http://mirrordirector.raspbian.org/raspbian/"
+        source = "deb {} wheezy main contrib non-free rpi".format(repo_url)
+        write_file_contents('/etc/apt/sources.list', "{}\n".format(source))
+
         run_cmd_log('apt-get -y clean')
         run_cmd_log('apt-get -y update')
 
