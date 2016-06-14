@@ -1,292 +1,293 @@
-# German translations for kano-updater package
-# German messages for kano-updater.
-# Copyright (C) 2015 Kano Computing Ltd.
+# Japanese translations for kano-updater package.
+# Copyright (C) 2016 Kano Computing Ltd.
 # This file is distributed under the same license as the kano-updater package.
-#  <kontakt@hanno.de>, 2015.
+# Choppin Antoine <antoine@japonophile.com>, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kano-updater\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-14 21:34+0900\n"
-"PO-Revision-Date: 2015-02-13 17:16+0100\n"
-"Last-Translator:  <kontakt@hanno.de>\n"
-"Language-Team: German <kontakt@hanno.de>\n"
-"Language: de\n"
+"PO-Revision-Date: 2016-06-03 22:59+0900\n"
+"Last-Translator: Choppin Antoine <antoine@japonophile.com>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../bin/kano-updater:153
 msgid "Administrator priviledges are required to perform this operation"
-msgstr ""
+msgstr "この操作を行うには、管理者権限が必要です"
 
 #: ../bin/kano-updater:154 ../bin/kano-updater:169
 msgid "ERROR"
-msgstr "FEHLER"
+msgstr "エラー"
 
 #: ../bin/kano-updater:167
 msgid "An instance of Kano Updater is already running"
-msgstr ""
+msgstr "Kanoアップデーターが既に稼働中"
 
 #: ../bin/kano-updater:263
 msgid "Time check passed, doing update check!"
-msgstr ""
+msgstr "確認時間が過ぎました。アップデートを確認します。"
 
 #: ../bin/kano-updater:265
 msgid "Not enough time passed for a new update check!"
-msgstr ""
+msgstr "時間があまり経っていないのでアップデートの確認は不要です。"
 
 #: ../bin/kano-updater:290
 msgid "Urgent updates available."
-msgstr ""
+msgstr "緊急なアップデートが取得可能です。"
 
 #: ../bin/kano-updater:295
 msgid "Updates available."
-msgstr ""
+msgstr "アップデートが取得可能です。"
 
 #: ../bin/kano-updater:312
 msgid "No updates found."
-msgstr ""
+msgstr "アップデートは見つかりません。"
 
 #: ../kano_updater/apt_wrapper.py:54
 msgid "Updating apt sources"
-msgstr ""
+msgstr "APTソースをアップデート中"
 
 #: ../kano_updater/apt_wrapper.py:55
 msgid "Initialising apt cache"
-msgstr ""
+msgstr "APTキャッシュを初期化中"
 
 #: ../kano_updater/apt_wrapper.py:125 ../kano_updater/apt_wrapper.py:152
 msgid "Downloading packages"
-msgstr ""
+msgstr "パッケージをダウンロード中"
 
 #: ../kano_updater/apt_wrapper.py:126 ../kano_updater/apt_wrapper.py:153
 msgid "Installing packages"
-msgstr ""
+msgstr "パッケージをインストール中"
 
 #: ../kano_updater/apt_wrapper.py:230
 msgid "Cleaning dpkg journal"
-msgstr ""
+msgstr "DPKGジャーナル掃除中"
 
 #: ../kano_updater/apt_wrapper.py:232
 msgid "Fixing broken packages"
-msgstr ""
+msgstr "壊れたパッケージを修理中"
 
 #: ../kano_updater/auxiliary_tasks.py:21
 msgid "Updating home folders from template"
-msgstr ""
+msgstr "ホームフォルダーをテンプレートからアップデート中"
 
 #: ../kano_updater/auxiliary_tasks.py:23
 msgid "Refreshing Kano Apps"
-msgstr ""
+msgstr "Kanoアプリを更新中"
 
 #: ../kano_updater/auxiliary_tasks.py:25
 msgid "Refreshing the desktop"
-msgstr ""
+msgstr "デスクトップを更新中"
 
 #: ../kano_updater/auxiliary_tasks.py:27
 msgid "Expanding filesystem partitions"
-msgstr ""
+msgstr "ファイルシステムのパーテーションを拡張中"
 
 #: ../kano_updater/auxiliary_tasks.py:29
 msgid "Removing unnecessary kano-content entries"
-msgstr ""
+msgstr "Kanoコンテンツの不要な項目を削除中"
 
 #: ../kano_updater/auxiliary_tasks.py:31
 msgid "Syncing"
-msgstr ""
+msgstr "同期中"
 
 #: ../kano_updater/commands/check.py:44
 msgid "No need to check for updates"
-msgstr ""
+msgstr "アップデートの確認は不要です"
 
 #: ../kano_updater/commands/check.py:57
 msgid "Must have internet to check for updates"
-msgstr ""
+msgstr "アップデートを確認するにはインターネットが必要です"
 
 #: ../kano_updater/commands/check.py:65 ../kano_updater/commands/download.py:82
 msgid "Could not connect to the download server"
-msgstr ""
+msgstr "ダウンロードサーバーに接続が失敗しました"
 
 #: ../kano_updater/commands/download.py:37
 msgid "Checking for updates"
-msgstr ""
+msgstr "アップデートを確認中"
 
 #: ../kano_updater/commands/download.py:43
 #: ../kano_updater/commands/install.py:82
 msgid "Downloading updates"
-msgstr ""
+msgstr "アップデートをダウンロード中"
 
 #: ../kano_updater/commands/download.py:52
 #: ../kano_updater/ui/install_window.py:132
 msgid "No updates to download"
-msgstr ""
+msgstr "ダウンロードするアップデートがありません"
 
 #: ../kano_updater/commands/download.py:58
 msgid "Updates have been downloaded already"
-msgstr ""
+msgstr "アップデートは既にダウンロードされました"
 
 #: ../kano_updater/commands/download.py:64
 msgid "The download is already running"
-msgstr ""
+msgstr "ダウンロードは既に走っています"
 
 #: ../kano_updater/commands/download.py:70
 msgid "Updates are already being installed"
-msgstr ""
+msgstr "アップデートは既にインストール中です"
 
 #: ../kano_updater/commands/download.py:76
 msgid "Must have internet to download the updates"
-msgstr ""
+msgstr "アップデートをダウンロードするにはインターネットが必要です"
 
 #: ../kano_updater/commands/install.py:49
 msgid "Only {}MB free, at least 1GB is needed."
-msgstr ""
+msgstr "1GB必要ですが、空き容量は{}MBしかありません。"
 
 #: ../kano_updater/commands/install.py:88
 msgid "Installing updates"
-msgstr ""
+msgstr "アップデートをインストール中"
 
 #: ../kano_updater/commands/install.py:189
 msgid "Installing Hotfix"
-msgstr ""
+msgstr "ホットフィックスをインストール中"
 
 #: ../kano_updater/commands/install.py:216
 msgid "Starting Update"
-msgstr ""
+msgstr "アップデートを開始します"
 
 #: ../kano_updater/commands/install.py:222
 msgid "Updating Itself"
-msgstr ""
+msgstr "自己アップデート中"
 
 #: ../kano_updater/commands/install.py:228
 msgid "Running The Preupdate Scripts"
-msgstr ""
+msgstr "アップデートの前処理を実行中"
 
 #: ../kano_updater/commands/install.py:234
 msgid "Updating Pip Packages"
-msgstr ""
+msgstr "Pipパッケージをアップデート中"
 
 #: ../kano_updater/commands/install.py:240
 msgid "Updating Deb Packages"
-msgstr ""
+msgstr "Debパッケージをアップデート中"
 
 #: ../kano_updater/commands/install.py:246
 msgid "Running The Postupdate Scripts"
-msgstr ""
+msgstr "アップデートの後処理を実行中"
 
 #: ../kano_updater/commands/install.py:273
 msgid ""
 "Unfortunately, your version of Kano OS is too old to be updated through the "
 "updater."
 msgstr ""
-"Leider ist Dein Kano OS zu alt, um es mit dem Updater auf den neuesten Stand "
-"zu bringen."
+"まことに申し訳ありませんが、アップデーターでアップデートするにはKano OSが"
+"古すぎます。"
 
 #: ../kano_updater/commands/install.py:275
 msgid "You will need to download the image of the OS and reflash your SD card."
-msgstr ""
-"Bitte lade das neueste Image von Kano OS herunter und installiere es mit "
-"einer SD-Karte."
+msgstr "OSイメージをダウンロードし、SDカードを焼き直す必要があります。"
 
 #: ../kano_updater/commands/install.py:297
 msgid "The updater has been updated, relaunching."
-msgstr ""
+msgstr "アップデーターがアップデートされました。再起動します。"
 
 #: ../kano_updater/commands/install.py:307
 msgid "The pre-update tasks failed."
-msgstr ""
+msgstr "アップデートの前処理が失敗しました。"
 
 #: ../kano_updater/commands/install.py:324
 msgid "The post-update tasks failed."
-msgstr ""
+msgstr "アップデートの後処理が失敗しました。"
 
 #: ../kano_updater/ui/available_window.py:67
 msgid "Later"
-msgstr "Später"
+msgstr "後で"
 
 #: ../kano_updater/ui/available_window.py:96
 msgid "The action needs to be implemented"
-msgstr ""
+msgstr "アクションを実装する必要があります"
 
 #: ../kano_updater/ui/available_window.py:104
 #: ../kano_updater/ui/available_window.py:126
 #: ../kano_updater/ui/available_window.py:144
 msgid "New Update"
-msgstr "Neues Update"
+msgstr "新しいアップデート"
 
 #: ../kano_updater/ui/available_window.py:105
 msgid "Get new powers"
-msgstr ""
+msgstr "新しい力を取得する"
 
 #: ../kano_updater/ui/available_window.py:106
 msgid "Download the latest Kano OS"
-msgstr ""
+msgstr "最新のKano OSをダウンロードする"
 
 #: ../kano_updater/ui/available_window.py:107
 msgid "Download"
-msgstr ""
+msgstr "ダウンロード"
 
 #: ../kano_updater/ui/available_window.py:127
 msgid "Almost there..."
-msgstr ""
+msgstr "もう少しで終わりです…"
 
 #: ../kano_updater/ui/available_window.py:128
 msgid ""
 "Downloaded and ready to go! In a matter\n"
 "of minutes your Kano will be fresher than ever"
 msgstr ""
+"ダウンロードが終わると準備完了！数分経ったら\n"
+"君のKanoが今までに見たことない若返りします。"
 
 #: ../kano_updater/ui/available_window.py:130
 msgid "Install"
-msgstr ""
+msgstr "インストール"
 
 #: ../kano_updater/ui/available_window.py:145
 msgid "Best time to update is now!"
-msgstr ""
+msgstr "アップデートする一番良い時期は、今！"
 
 #: ../kano_updater/ui/available_window.py:146
 msgid ""
 "Latest updates and content are ready to go! We\n"
 "will make sure to Shutdown once we finish installing!"
 msgstr ""
+"最新のアップデートとコンテンツが準備されます！\n"
+"インストール終了後に再起動します！"
 
 #: ../kano_updater/ui/available_window.py:148
 msgid "Update Now"
-msgstr "Jetzt updaten"
+msgstr "今アップデートする"
 
 #: ../kano_updater/ui/install_window.py:37
 msgid "Updater"
-msgstr "Updater"
+msgstr "アップデーター"
 
 #: ../kano_updater/ui/install_window.py:78
 msgid "The install quit unexpectedly"
-msgstr ""
+msgstr "インストールが予告無く終了しました"
 
 #: ../kano_updater/ui/install_window.py:79
 msgid "Please try again later"
-msgstr ""
+msgstr "後でもう一度試してください"
 
 #: ../kano_updater/ui/install_window.py:110
 msgid "No updates available"
-msgstr ""
+msgstr "アップデートはありません"
 
 #: ../kano_updater/ui/install_window.py:111
 msgid "Your system is already up to date"
-msgstr ""
+msgstr "システムは既に最新状況です"
 
 #: ../kano_updater/ui/install_window.py:130
 msgid "Update completed"
-msgstr ""
+msgstr "アップデート完了"
 
 #: ../kano_updater/ui/install_window.py:161
 msgid "Error updating"
-msgstr ""
+msgstr "アップデート失敗"
 
 #: ../kano_updater/ui/relaunch_window.py:32
 msgid "Updater Splash"
-msgstr ""
+msgstr "アップデータースプラッシュ"
 
 #: ../kano_updater/ui/stage_text.py:32
 msgid ""
@@ -299,14 +300,6 @@ msgid ""
 "the world. You can also search for the white rabbit on <b>http://world.kano."
 "me</b>"
 msgstr ""
-"1978 war die Cray 1 der schnellste Computer der Welt — sie kostete 7 "
-"Millionen US-Dollar und war so schwer wie ein Elefant! Dein Kano ist ca. "
-"vier mal so schnell wie die Cray 1. Damit er auf Zack bleibt, optimieren wir "
-"jetzt seinen Speicher und laden neue Spiele, Apps und Projekte herunter. Das "
-"wird eine gute Viertelstunde dauern. Wie wär's, wenn Du währenddessen ein "
-"Foto von Deinem Kano machst? Schick's an <b>hello@kano.me</b> und wir teilen "
-"es mit der Welt. Oder komm zu <b>http://world.kano.me</b> und suche das "
-"weiße Kaninchen."
 
 #: ../kano_updater/ui/stage_text.py:44
 msgid ""
@@ -319,15 +312,6 @@ msgid ""
 "tiny switches, called transistors, in its brain. In your brain, these "
 "switches are cells called neurons. They're talking to each other right now."
 msgstr ""
-"Computer können schnell neue Ideen lernen. Im Moment aktualisieren wir den "
-"Updater. Wenn das erledigt ist wird der Updater neu starten. Wie denken "
-"Computer? Sie bestehen aus winzigen elektrischen Schaltern, die in tollen "
-"Schaltkreisen miteinander verdrahtet sind. Ist der Schalter an, heißt das "
-"\"Ja\" oder \"1\", ist er aus, heißt das \"Nein\" oder \"0\". Diese kleinen "
-"Ja-Nein-Schalter bilden einen binären Code — und daraus werden Wörter, Töne, "
-"Regeln und mehr. Die Schalter im Gehirn Deines Computer heißen Transistoren, "
-"und es sind über 10 Million drin. Die Schalter in Deinem Gehirn sind Zellen "
-"und heißen Neuronen. Jetzt gerade reden sie miteinander."
 
 #: ../kano_updater/ui/stage_text.py:57
 msgid ""
@@ -341,15 +325,6 @@ msgid ""
 "\"Gangnam Style\" from YouTube, and move millions of dollars in the New York "
 "Stock Exchange."
 msgstr ""
-"Python ist eine der beliebtesten Programmiersprachen der Welt. Eine "
-"Programmiersprache übersetzt Wörter, die ein Mensch verstehen kann, in "
-"Anweisungen, welche die Schalter des Computers verstehen. Ein gut "
-"durchdachtes \"Mach mir ein Sandwich\"-Programm würde alle Schritte für die "
-"Sandwich-Zubereitung beschreiben, von \"hole eine Scheibe Brot\" über \"nimm "
-"das Messer\" bis \"leg's auf den Teller\". Ein Computer befolgt ein Python-"
-"Programm so, wie ein Koch ein Rezept befolgt. Python-Code kann Vulkane in "
-"Minecraft bauen, \"Gangnam Style\" von Youtube ziehen und Millionen US-"
-"Dollar an der New Yorker Börse bewegen."
 
 #: ../kano_updater/ui/stage_text.py:71
 msgid ""
@@ -363,16 +338,6 @@ msgid ""
 "powerup ideas. Want a look inside Kano HQ? Hang with our wizards at <b>blog."
 "kano.me</b>"
 msgstr ""
-"Dein Computer heißt \"Kano\" - nach Kanō Jigorō. Der japanische Lehrer ist "
-"der Erfinder der Kampfkunst Judo. Sein Prinzip: Maximale Wirkung bei einem "
-"Minimum an Aufwand. Das griechische Verb Kano heißt \"ich mache\". (Und Kano "
-"heißt auch die größte Stadt im Norden Nigerias.) Was unterscheidet Deinen "
-"Kano von anderen Computern? Du kannst Dir alles ansehen, was in seinem "
-"Gehirn passiert. Auf <b>github.com/KanoComputing</b> findest Du den Code. "
-"Dein Kano kann seine Form verändern… Du kannst aus ihm einen Roboter, einen "
-"Server, ein Radio und vieles mehr machen. Einige Ideen dafür findest Du auf "
-"<b>world.kano.me/projects</b>. Und auf <b>blog.kano.me</b> lernst Du die "
-"Leute hinter Kano kennen."
 
 #: ../kano_updater/ui/stage_text.py:83
 msgid ""
@@ -384,14 +349,6 @@ msgid ""
 "Station also uses to run its robotic systems — to keep the astronauts from "
 "losing their lunch!"
 msgstr ""
-"Kano OS ist ein Betriebssystem. Das heißt, es stellt Dir alle nötigen "
-"Programme startklar zu Verfügung. Es basiert auf Linux. Linux ist Open "
-"Source Software — es ist kostenlos und jeder kann es herunterladen, "
-"verändern und sogar verkaufen. Der Linux-Code wird von Bastlern weltweit "
-"geschrieben, nicht nur von Profis. Kano verwendet Debian, eine tolle und "
-"beliebte Linux-\"Distribution\", die z.B. auf der Internationale Raumstation "
-"ISS die Robotersysteme steuert, damit die Astronauten ihr Essen nicht "
-"verlieren!"
 
 #: ../kano_updater/ui/stage_text.py:94
 msgid ""
@@ -400,11 +357,6 @@ msgid ""
 "more. Your computer is open, and its powers are at your command. If you want "
 "to get new cool projects from us each week, join the community at"
 msgstr ""
-"Gleich sind wir fertig! Mit Deinem Kano-Computer wirst Du großartige Spiele, "
-"Programme, Deine eigene Musik machen. Du kannst Videos im Haus streamen, "
-"Geschichten erzählen und noch viel mehr. Dein Computer ist offen und er "
-"steht Dir zur Verfügung. Wenn Du coole neue Projekte von uns kriegen willst, "
-"schau doch mal rein unter"
 
 #: ../kano_updater/ui/stage_text.py:101
 msgid ""
@@ -412,35 +364,37 @@ msgid ""
 "\n"
 "See you in a while…"
 msgstr ""
-"Dein Kano-Computer wird jetzt neu starten!\n"
+"君のKanoは間も無く再起動します！\n"
 "\n"
-"Bis gleich…"
+"また後ほど…"
 
 #: ../kano_updater/ui/views/finish.py:23
 msgid "Update complete!"
-msgstr ""
+msgstr "アップデート完了！"
 
 #: ../kano_updater/ui/views/finish.py:34
 msgid ""
 "Your Kano is up to date and \n"
 "will automatically {} in 10 seconds"
 msgstr ""
+"君のKanoは最新状況です。\n"
+"10秒後に自動的に{}されます。"
 
 #: ../kano_updater/ui/views/finish.py:39
 msgid "Press ENTER to {} now"
-msgstr ""
+msgstr "{}するにはENTERを押してください"
 
 #: ../kano_updater/ui/views/install.py:53
 msgid "Do you want to play a cool game instead? PRESS [J] TO LAUNCH!"
-msgstr ""
+msgstr "それより、面白いゲームをやってみますか？スタートするには[J]を！"
 
 #: ../kano_updater/ui/views/relaunch.py:24
 msgid "Relaunching the Updater"
-msgstr ""
+msgstr "アップデーターを再起動"
 
 #: ../kano_updater/ui/views/relaunch.py:27
 msgid "The Updater updated itself and is now starting again."
-msgstr ""
+msgstr "アップデーターがアップデーターされ、間も無く再起動します。"
 
 #: ../kano_updater/utils.py:296
 msgid ""
@@ -449,142 +403,52 @@ msgid ""
 "\n"
 "If you still have problems, we can help at http://help.kano.me"
 msgstr ""
-"Beim Update gab es ein Problem. Bitte prüfe die Internet-Verbindung und "
-"versuche es noch einmal.\n"
+"アップデート中に問題が発生しました。インターネットに接続していることを"
+"今一度確認して、もう一度試してください。\n"
 "\n"
-"Falls Du nicht weiterkommst, können wir Dir bei http://help.kano.me helfen."
+"それでもうまくいかない場合は、http://help.kano.meでヘルプを求めてください。"
 
 #: ../kano_updater/utils.py:301
 msgid "Update error"
-msgstr "Update-Fehler"
+msgstr "アップデートエラー"
 
 #: ../kano_updater/utils.py:564
 msgid "Error!"
-msgstr "Fehler!"
+msgstr "エラー！"
 
 #: ../kano_updater/utils.py:565
 msgid "kano-updater must be executed with root privileges"
-msgstr "kano-updater benötigt Root-Rechte"
+msgstr "kano-updaterはroot権限で実行する必要があります"
 
 #: ../lxpanel-plugin/kano_updater.c:53 ../lxpanel-plugin/kano_updater.c:445
 #: ../lxpanel-plugin/kano_updater.c:537
 msgid "Kano Updater"
-msgstr "Kano Updater"
+msgstr "Kanoアップデーター"
 
 #: ../lxpanel-plugin/kano_updater.c:448
 msgid "Download updates"
-msgstr ""
+msgstr "アップデートをダウンロードする"
 
 #: ../lxpanel-plugin/kano_updater.c:451
 msgid "Download in progress ..."
-msgstr ""
+msgstr "ダウンロード中…"
 
 #: ../lxpanel-plugin/kano_updater.c:454
 msgid "Install updates"
-msgstr ""
+msgstr "アップデートをインストールする"
 
 #: ../lxpanel-plugin/kano_updater.c:457
 msgid "Installation in progress ..."
-msgstr ""
+msgstr "インストール中…"
 
 #: ../lxpanel-plugin/kano_updater.c:460
 msgid "No updates found"
-msgstr "Keine Updates gefunden"
+msgstr "アップデートは見つかりません"
 
 #: ../lxpanel-plugin/kano_updater.c:462
 msgid "Check again"
-msgstr "Nochmal prüfen"
+msgstr "もう一度確認する"
 
 #: ../lxpanel-plugin/kano_updater.c:538
 msgid "A reminder to keep your Kano OS up-to-date."
-msgstr "Hält Kano OS auf dem neuesten Stand."
-
-#~ msgid "Time to update!"
-#~ msgstr "Zeit für ein Update!"
-
-#~ msgid "Take a break! Updating takes about 15 minutes"
-#~ msgstr "Mach mal Pause! Das Update dauert etwa 15 Minuten"
-
-#~ msgid "Update now"
-#~ msgstr "Jetzt updaten"
-
-#~ msgid "You need to run kano-updater from a GUI session!"
-#~ msgstr "Du musst kano-updater aus der GUI heraus starten!"
-
-#~ msgid "Let's update!"
-#~ msgstr "Ein Update!"
-
-#~ msgid "Your Kano is about to get better"
-#~ msgstr "Dein Kano wird jetzt verbessert"
-
-#~ msgid "Internet connection lost!"
-#~ msgstr "Keine Internet-Verbindung!"
-
-#~ msgid "Error with downloading packages!"
-#~ msgstr "Konnte Pakete nicht herunterladen!"
-
-#~ msgid "1. Downloading…"
-#~ msgstr "1. Vorbereitung…"
-
-#~ msgid ""
-#~ "2. Updating\n"
-#~ "the updater…"
-#~ msgstr ""
-#~ "2. Updates für\n"
-#~ "den Updater…"
-
-#~ msgid ""
-#~ "3. Upgrading\n"
-#~ "Python…"
-#~ msgstr ""
-#~ "3. Updates für\n"
-#~ "Python…"
-
-#~ msgid ""
-#~ "4. Optimizing\n"
-#~ "your Kano…"
-#~ msgstr ""
-#~ "4. Verbesserungen\n"
-#~ "für Deinen Kano…"
-
-#~ msgid ""
-#~ "5. Upgrading\n"
-#~ "your system…"
-#~ msgstr ""
-#~ "5. Updates für\n"
-#~ "Dein System…"
-
-#~ msgid ""
-#~ "6. Finishing\n"
-#~ "up…"
-#~ msgstr "6. Aufräumen…"
-
-#~ msgid "Downloading…"
-#~ msgstr "Vorbereitung…"
-
-#~ msgid "Updating the updater…"
-#~ msgstr "Updates für den Updater…"
-
-#~ msgid "Upgrading Python…"
-#~ msgstr "Updates für Python…"
-
-#~ msgid "Optimizing your Kano…"
-#~ msgstr "Verbesserungen für Deinen Kano…"
-
-#~ msgid "Upgrading your Operating System…"
-#~ msgstr "Updates für Dein Betriebssystem…"
-
-#~ msgid "Finishing up…"
-#~ msgstr "Aufräumen…"
-
-#~ msgid "System updated!"
-#~ msgstr "System auf neuestem Stand!"
-
-#~ msgid "Do not disconnect your Kano"
-#~ msgstr "Schalte Deinen Kano nicht ab"
-
-#~ msgid "Please stand by"
-#~ msgstr "Bitte warten"
-
-#~ msgid "Update your system"
-#~ msgstr "Updates für Dein System"
+msgstr "Kano OSを常に最新に保っておきましょう。"

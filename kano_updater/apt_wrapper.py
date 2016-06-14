@@ -8,6 +8,7 @@
 import apt
 import aptsources.sourceslist
 import apt_pkg
+import gettext
 
 from kano.logging import logger
 from kano.utils import run_cmd_log
@@ -18,6 +19,10 @@ from kano_updater.os_version import SYSTEM_VERSION
 from kano_updater.progress import Phase
 import kano_updater.priority as Priority
 from kano_updater.special_packages import independent_install_list
+
+
+def apt_gettext(msg):
+    return gettext.dgettext('python-apt', msg)
 
 class AptWrapper(object):
     def __init__(self):
@@ -61,8 +66,8 @@ class AptWrapper(object):
             progress.fail(_(err_msg))
 
         progress.start(cache_init)
-        ops = [_('Reading package lists'), _('Building dependency tree'),
-               _('Reading state information'), _('Building data structures')]
+        ops = [apt_gettext('Reading package lists'), apt_gettext('Building dependency tree'),
+               apt_gettext('Reading state information'), apt_gettext('Building data structures')]
         op_progress = AptOpProgress(progress, ops)
         self._cache.open(op_progress)
 
@@ -117,8 +122,8 @@ class AptWrapper(object):
         download = "{}-downloading".format(phase_name)
         install = "{}-installing".format(phase_name)
         progress.split(
-            Phase(download, "Downloading packages"),
-            Phase(install, "Installing packages")
+            Phase(download, _("Downloading packages")),
+            Phase(install, _("Installing packages"))
         )
 
         progress.start(download)
@@ -144,8 +149,8 @@ class AptWrapper(object):
         download = "{}-downloading".format(phase_name)
         install = "{}-installing".format(phase_name)
         progress.split(
-            Phase(download, "Downloading packages"),
-            Phase(install, "Installing packages")
+            Phase(download, _("Downloading packages")),
+            Phase(install, _("Installing packages"))
         )
 
         progress.start(download)
