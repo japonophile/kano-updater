@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kano-updater\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-15 21:21+0900\n"
+"POT-Creation-Date: 2016-06-15 22:04+0900\n"
 "PO-Revision-Date: 2016-06-03 22:59+0900\n"
 "Last-Translator: Choppin Antoine <antoine@japonophile.com>\n"
 "Language-Team: Japanese\n"
@@ -151,8 +151,8 @@ msgid ""
 "schedule the install when they finish."
 msgstr ""
 "たった今、Kano本社から重要なアップデートがリリースされ、システムの大事な機能"
-"を直すのに必要です！このアップデートは自動的にダウンロードされ、その後"
-"インストールが予定されます。"
+"を直すのに必要です！このアップデートは自動的にダウンロードされ、その後インス"
+"トールが予定されます。"
 
 #: ../kano_updater/commands/download.py:94
 msgid "OK:green:1"
@@ -186,6 +186,12 @@ msgstr "1GB必要ですが、空き容量は{}MBしかありません。"
 msgid "Installing updates"
 msgstr "アップデートをインストール中"
 
+#: ../kano_updater/commands/install.py:143
+#: ../kano_updater/commands/install.py:181
+#: ../kano_updater/ui/install_window.py:130
+msgid "Update completed"
+msgstr "アップデート完了"
+
 #: ../kano_updater/commands/install.py:189
 msgid "Installing Hotfix"
 msgstr "ホットフィックスをインストール中"
@@ -214,6 +220,10 @@ msgstr "Debパッケージをアップデート中"
 msgid "Running The Postupdate Scripts"
 msgstr "アップデートの後処理を実行中"
 
+#: ../kano_updater/commands/install.py:252
+msgid "Performing auxiliary tasks"
+msgstr "追加処理を実施しています"
+
 #: ../kano_updater/commands/install.py:273
 msgid ""
 "Unfortunately, your version of Kano OS is too old to be updated through the "
@@ -237,6 +247,10 @@ msgstr "アップデートの前処理が失敗しました。"
 #: ../kano_updater/commands/install.py:324
 msgid "The post-update tasks failed."
 msgstr "アップデートの後処理が失敗しました。"
+
+#: ../kano_updater/commands/install.py:349
+msgid "Installing {}"
+msgstr "{}をインストール中"
 
 #: ../kano_updater/progress.py:296
 msgid "ERROR: {}"
@@ -328,13 +342,13 @@ msgstr "アップデートはありません"
 msgid "Your system is already up to date"
 msgstr "システムは既に最新状況です"
 
-#: ../kano_updater/ui/install_window.py:130
-msgid "Update completed"
-msgstr "アップデート完了"
-
 #: ../kano_updater/ui/install_window.py:161
 msgid "Error updating"
 msgstr "アップデート失敗"
+
+#: ../kano_updater/ui/progress.py:37
+msgid "Complete!"
+msgstr "完了！"
 
 #: ../kano_updater/ui/relaunch_window.py:32
 msgid "Updater Splash"

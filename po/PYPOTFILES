@@ -7,6 +7,7 @@
 ../kano_updater/progress.py
 ../kano_updater/ui/available_window.py
 ../kano_updater/ui/install_window.py
+../kano_updater/ui/progress.py
 ../kano_updater/ui/relaunch_window.py
 ../kano_updater/ui/stage_text.py
 ../kano_updater/ui/views/finish.py

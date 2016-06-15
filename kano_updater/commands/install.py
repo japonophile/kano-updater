@@ -33,7 +33,7 @@ class InstallError(Exception):
 
 def install(progress=None, gui=True):
     status = UpdaterStatus.get_instance()
-    logger.debug("Installing update (updater state = {})".format(status.state))
+    logger.debug(u"Installing update (updater state = {})".format(status.state))
 
     if not progress:
         progress = DummyProgress()
@@ -103,7 +103,7 @@ def install(progress=None, gui=True):
     if status.is_urgent:
         priority = Priority.URGENT
 
-    logger.debug('Installing with priority {}'.format(priority.priority))
+    logger.debug(u'Installing with priority {}'.format(priority.priority))
 
     try:
         return do_install(progress, status, priority=priority)
@@ -140,7 +140,7 @@ def do_install(progress, status, priority=Priority.NONE):
     status.is_scheduled = False
     status.save()
 
-    progress.finish('Update completed')
+    progress.finish(_('Update completed'))
     return True
 
 def install_ind_package(progress, package):
@@ -178,7 +178,7 @@ def install_ind_package(progress, package):
     status.is_scheduled = False
     status.save()
 
-    progress.finish('Update completed')
+    progress.finish(_('Update completed'))
     return True
 
 
@@ -249,7 +249,7 @@ def install_standard(progress, status):
         ),
         Phase(
             'aux-tasks',
-            'Performing auxiliary tasks',
+            _('Performing auxiliary tasks'),
             10,
             is_main=True
         )
@@ -262,7 +262,7 @@ def install_standard(progress, status):
     # determine the versions (from and to)
     system_version = OSVersion.from_version_file(SYSTEM_VERSION_FILE)
 
-    msg = "Upgrading from {} to {}".format(system_version, TARGET_VERSION)
+    msg = u"Upgrading from {} to {}".format(system_version, TARGET_VERSION)
     logger.info(msg)
 
     # set up the scenarios and check whether they cover updating
@@ -346,7 +346,7 @@ def install_pip_packages(progress, priority=Priority.NONE):
     progress.init_steps(phase_name, len(packages))
 
     for pkg in packages:
-        progress.next_step(phase_name, "Installing {}".format(pkg))
+        progress.next_step(phase_name, _("Installing {}").format(pkg))
 
         success = run_pip_command(
             "install --upgrade --no-index --find-links=file://{} '{}'".format(
@@ -354,10 +354,10 @@ def install_pip_packages(progress, priority=Priority.NONE):
         )
 
         if not success:
-            msg = "Installing the '{}' pip package failed".format(pkg)
+            msg = u"Installing the '{}' pip package failed".format(pkg)
             logger.error(msg)
             if not is_internet():
-                msg = "Network is down, aborting PIP install"
+                msg = u"Network is down, aborting PIP install"
                 logger.error(msg)
                 raise IOError(msg)
 
@@ -366,6 +366,6 @@ def install_pip_packages(progress, priority=Priority.NONE):
                 "install --upgrade '{}'".format(pkg)
             )
             if not success_failsafe:
-                msg = "Installing the '{}' pip package failed (fsafe)".format(
+                msg = u"Installing the '{}' pip package failed (fsafe)".format(
                     pkg)
                 logger.error(msg)

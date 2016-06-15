@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kano-updater\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-15 21:21+0900\n"
+"POT-Creation-Date: 2016-06-15 22:04+0900\n"
 "PO-Revision-Date: 2015-02-13 17:16+0100\n"
 "Last-Translator:  <kontakt@hanno.de>\n"
 "Language-Team: German <kontakt@hanno.de>\n"
@@ -184,6 +184,12 @@ msgstr ""
 msgid "Installing updates"
 msgstr ""
 
+#: ../kano_updater/commands/install.py:143
+#: ../kano_updater/commands/install.py:181
+#: ../kano_updater/ui/install_window.py:130
+msgid "Update completed"
+msgstr ""
+
 #: ../kano_updater/commands/install.py:189
 msgid "Installing Hotfix"
 msgstr ""
@@ -212,6 +218,10 @@ msgstr ""
 msgid "Running The Postupdate Scripts"
 msgstr ""
 
+#: ../kano_updater/commands/install.py:252
+msgid "Performing auxiliary tasks"
+msgstr ""
+
 #: ../kano_updater/commands/install.py:273
 msgid ""
 "Unfortunately, your version of Kano OS is too old to be updated through the "
@@ -236,6 +246,10 @@ msgstr ""
 
 #: ../kano_updater/commands/install.py:324
 msgid "The post-update tasks failed."
+msgstr ""
+
+#: ../kano_updater/commands/install.py:349
+msgid "Installing {}"
 msgstr ""
 
 #: ../kano_updater/progress.py:296
@@ -324,12 +338,12 @@ msgstr ""
 msgid "Your system is already up to date"
 msgstr ""
 
-#: ../kano_updater/ui/install_window.py:130
-msgid "Update completed"
-msgstr ""
-
 #: ../kano_updater/ui/install_window.py:161
 msgid "Error updating"
+msgstr ""
+
+#: ../kano_updater/ui/progress.py:37
+msgid "Complete!"
 msgstr ""
 
 #: ../kano_updater/ui/relaunch_window.py:32
