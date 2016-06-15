@@ -36,11 +36,11 @@ class AptDownloadProgress(apt.progress.base.AcquireProgress):
 
     def done(self, item_desc):
         super(AptDownloadProgress, self).done(item_desc)
-        msg = "Downloading {}".format(item_desc.shortdesc)
+        msg = _("Downloading {}").format(item_desc.shortdesc)
 
         # Show the long description too if it's not too long
         if len(item_desc.description) < 40:
-            msg = "{} {}".format(msg, item_desc.description)
+            msg = u"{} {}".format(msg, item_desc.description)
 
         self._updater_progress.next_step(self._phase_name, msg)
 
@@ -71,9 +71,11 @@ class AptOpProgress(apt.progress.base.OpProgress):
             self._updater_progress.init_steps(op, 100)
 
     def _get_op_key(self, op_name):
-        template = "{prefix}-{{}}".format(prefix=self._phase_name)
+        template = u"{prefix}-{{}}".format(prefix=self._phase_name)
 
-        return template.format(op_name).lower().replace(' ', '-')
+        op_name = op_name.decode('utf-8')
+        print "_get_op_key " + op_name
+        return template.format(op_name).lower().replace(u' ', u'-')
 
     def _next_phase(self):
         if len(self._ops) <= 1:
@@ -106,7 +108,7 @@ class AptInstallProgress(apt.progress.base.InstallProgress):
         print 'conffile', current, new
 
     def error(self, pkg, errormsg):
-        self._updater_progress.fail("{}: {}".format(pkg, errormsg))
+        self._updater_progress.fail(u"{}: {}".format(pkg, errormsg))
 
     def processing(self, pkg, stage):
         print 'processing', pkg, stage

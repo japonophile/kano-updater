@@ -46,9 +46,9 @@ class AptWrapper(object):
             if not src.disabled and not src.invalid:
                 src_count += len(src.comps) + 1
 
-        updating_sources = "{}-updating-apt-sources".format(
+        updating_sources = u"{}-updating-apt-sources".format(
             progress.get_current_phase().name)
-        cache_init = "{}-apt-cache-init".format(
+        cache_init = u"{}-apt-cache-init".format(
             progress.get_current_phase().name)
         progress.split(
             Phase(updating_sources, _('Updating apt sources')),
@@ -119,8 +119,8 @@ class AptWrapper(object):
                     pkg.mark_upgrade()
 
         phase_name = progress.get_current_phase().name
-        download = "{}-downloading".format(phase_name)
-        install = "{}-installing".format(phase_name)
+        download = u"{}-downloading".format(phase_name)
+        install = u"{}-installing".format(phase_name)
         progress.split(
             Phase(download, _("Downloading packages")),
             Phase(install, _("Installing packages"))
@@ -146,8 +146,8 @@ class AptWrapper(object):
             self._cache.upgrade(dist_upgrade=True)
 
         phase_name = progress.get_current_phase().name
-        download = "{}-downloading".format(phase_name)
-        install = "{}-installing".format(phase_name)
+        download = u"{}-downloading".format(phase_name)
+        install = u"{}-installing".format(phase_name)
         progress.split(
             Phase(download, _("Downloading packages")),
             Phase(install, _("Installing packages"))
