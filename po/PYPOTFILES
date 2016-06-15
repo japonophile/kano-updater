@@ -4,6 +4,7 @@
 ../kano_updater/commands/check.py
 ../kano_updater/commands/download.py
 ../kano_updater/commands/install.py
+../kano_updater/progress.py
 ../kano_updater/ui/available_window.py
 ../kano_updater/ui/install_window.py
 ../kano_updater/ui/relaunch_window.py

@@ -75,7 +75,7 @@ class Progress(object):
     """
 
     def __init__(self):
-        root_phase = Phase('root', 'The root phase', 1)
+        root_phase = Phase('root', u'The root phase', 1)
 
         self._phases = [root_phase]
         self._current_phase_idx = 0
@@ -93,8 +93,8 @@ class Progress(object):
 
         self._current_phase_idx = self._phases.index(phase)
 
-        log = "global({}%) local({}%): " \
-              "Starting '{}' ({}) [main phase '{}' ({})]".format(
+        log = u"global({}%) local({}%): " \
+              u"Starting '{}' ({}) [main phase '{}' ({})]".format(
                   phase.global_percent,
                   phase.percent,
                   phase.label,
@@ -123,7 +123,7 @@ class Progress(object):
             if subphase.name != phase.name \
                and self._get_phase_by_name(subphase.name, False):
 
-                msg = "Phase '{}' already exists".format(phase.name)
+                msg = u"Phase '{}' already exists".format(phase.name)
                 raise ValueError(msg)
 
             weight_factor = float(subphase.weight) / weight_sum
@@ -148,9 +148,10 @@ class Progress(object):
     def set_step(self, phase_name, step, msg):
         phase = self._get_phase_by_name(phase_name)
         phase.step = step
+        msg = msg.decode('utf-8')
 
-        log = "global({}%) local({}%): " \
-              "Next step in '{}' ({})  [main phase '{}' ({})]: {}".format(
+        log = u"global({}%) local({}%): " \
+              u"Next step in '{}' ({})  [main phase '{}' ({})]: {}".format(
                   phase.global_percent,
                   phase.percent,
                   phase.label,
@@ -172,11 +173,11 @@ class Progress(object):
                 return phase
 
         if do_raise:
-            raise ValueError("Phase '{}' doesn't exist".format(name))
+            raise ValueError(u"Phase '{}' doesn't exist".format(name))
 
     def fail(self, msg):
         phase = self._phases[self._current_phase_idx]
-        logger.debug("Error {}: {}".format(phase.label, msg))
+        logger.debug(u"Error {}: {}".format(phase.label, msg))
         self._error(phase, msg)
 
     def prompt(self, msg, question, answers=None):
@@ -184,16 +185,16 @@ class Progress(object):
             answers = ["yes", "no"]
 
         if len(answers) <= 0:
-            raise ValueError('The must be at least one answer to the question!')
+            raise ValueError(u'The must be at least one answer to the question!')
 
         return self._prompt(msg, question, answers)
 
     def finish(self, msg):
-        logger.debug("Complete: {}".format(msg))
+        logger.debug(u"Complete: {}".format(msg))
         self._done(msg)
 
     def relaunch(self):
-        logger.debug('Scheduling relaunch')
+        logger.debug(u'Scheduling relaunch')
         self._relaunch()
 
     def abort(self, msg):
@@ -201,7 +202,7 @@ class Progress(object):
             Akin a an exception
         """
         phase = self._phases[self._current_phase_idx]
-        logger.debug("Aborting {}, {}".format(phase.label, msg))
+        logger.debug(u"Aborting {}, {}".format(phase.label, msg))
         self._abort(phase, msg)
 
     def _change(self, phase, msg):
@@ -289,13 +290,13 @@ class DummyProgress(Progress):
 
 class CLIProgress(Progress):
     def _change(self, phase, msg):
-        print "{}%: {}".format(phase.global_percent, msg)
+        print u"{}%: {}".format(phase.global_percent, msg)
 
     def _error(self, phase, msg):
-        print "ERROR: {}".format(msg)
+        print _("ERROR: {}").format(msg)
 
     def _abort(self, phase, msg):
-        print "Aborting {}, {}".format(phase.label, msg)
+        print _("Aborting {}, {}").format(phase.label, msg)
 
     def _done(self, msg):
         print msg
@@ -305,18 +306,18 @@ class CLIProgress(Progress):
 
     def _prompt(self, msg, question, answers):
         if not os.isatty(sys.stdin.fileno()):
-            warn = "No tty, selecting the default answer for " + \
-                   "'{}' which is: {}".format(question, answers[0])
+            warn = _("No tty, selecting the default answer for " + \
+                   "'{}' which is: {}").format(question, answers[0])
             logger.warn(warn)
             return answers[0]
         else:
             print msg
             norm_answers = [answer.strip().lower() for answer in answers]
-            q_str = "{} [{}]: ".format(question, "/".join(norm_answers))
+            q_str = u"{} [{}]: ".format(question, u"/".join(norm_answers))
 
             answer = raw_input(q_str)
             while answer.strip().lower() not in norm_answers:
-                print "Type one of these:  {}".format(" ".join(norm_answers))
+                print _("Type one of these:  {}").format(" ".join(norm_answers))
                 answer = raw_input(q_str)
 
         return answer

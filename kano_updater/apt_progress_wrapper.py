@@ -74,7 +74,6 @@ class AptOpProgress(apt.progress.base.OpProgress):
         template = u"{prefix}-{{}}".format(prefix=self._phase_name)
 
         op_name = op_name.decode('utf-8')
-        print "_get_op_key " + op_name
         return template.format(op_name).lower().replace(u' ', u'-')
 
     def _next_phase(self):

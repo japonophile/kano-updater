@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kano-updater\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-15 00:00+0900\n"
+"POT-Creation-Date: 2016-06-15 21:21+0900\n"
 "PO-Revision-Date: 2016-06-03 22:59+0900\n"
 "Last-Translator: Choppin Antoine <antoine@japonophile.com>\n"
 "Language-Team: Japanese\n"
@@ -49,7 +49,7 @@ msgstr "アップデートが取得可能です。"
 msgid "No updates found."
 msgstr "アップデートは見つかりません。"
 
-#: ../kano_updater/apt_wrapper.py:54
+#: ../kano_updater/apt_wrapper.py:54 ../kano_updater/commands/download.py:136
 msgid "Updating apt sources"
 msgstr "APTソースをアップデート中"
 
@@ -139,6 +139,45 @@ msgstr "アップデートは既にインストール中です"
 msgid "Must have internet to download the updates"
 msgstr "アップデートをダウンロードするにはインターネットが必要です"
 
+#: ../kano_updater/commands/download.py:90
+#: ../kano_updater/ui/install_window.py:37
+msgid "Updater"
+msgstr "アップデーター"
+
+#: ../kano_updater/commands/download.py:91
+msgid ""
+"Kano HQ has just released a critical update that will repair some important "
+"things on your system! We'll download these automatically, and ask you to "
+"schedule the install when they finish."
+msgstr ""
+"たった今、Kano本社から重要なアップデートがリリースされ、システムの大事な機能"
+"を直すのに必要です！このアップデートは自動的にダウンロードされ、その後"
+"インストールが予定されます。"
+
+#: ../kano_updater/commands/download.py:94
+msgid "OK:green:1"
+msgstr "了解:green:1"
+
+#: ../kano_updater/commands/download.py:130
+msgid "Downloading Python packages"
+msgstr "パイソンパッケージをダウンロード中"
+
+#: ../kano_updater/commands/download.py:142
+msgid "Downloading apt packages"
+msgstr "APTパッケージをダウンロード中"
+
+#: ../kano_updater/commands/download.py:151
+msgid "Done downloading"
+msgstr "ダウンロード完了"
+
+#: ../kano_updater/commands/download.py:180
+msgid "Downloading {}"
+msgstr "{}ダウンロード中"
+
+#: ../kano_updater/commands/download.py:191
+msgid "Downloading the '{}' pip package failed."
+msgstr "'{}'と言うpipパッケージのダウンロードが失敗しました"
+
 #: ../kano_updater/commands/install.py:49
 msgid "Only {}MB free, at least 1GB is needed."
 msgstr "1GB必要ですが、空き容量は{}MBしかありません。"
@@ -199,6 +238,22 @@ msgstr "アップデートの前処理が失敗しました。"
 msgid "The post-update tasks failed."
 msgstr "アップデートの後処理が失敗しました。"
 
+#: ../kano_updater/progress.py:296
+msgid "ERROR: {}"
+msgstr "エラー：{}"
+
+#: ../kano_updater/progress.py:299
+msgid "Aborting {}, {}"
+msgstr "{}を中断します：{}"
+
+#: ../kano_updater/progress.py:309
+msgid "No tty, selecting the default answer for '{}' which is: {}"
+msgstr "ttyが無い為、'{}'に対するデフォルト回答（{}）を選択します"
+
+#: ../kano_updater/progress.py:320
+msgid "Type one of these:  {}"
+msgstr "次の中から選んでください： {}"
+
 #: ../kano_updater/ui/available_window.py:67
 msgid "Later"
 msgstr "後で"
@@ -257,10 +312,6 @@ msgstr ""
 msgid "Update Now"
 msgstr "今アップデートする"
 
-#: ../kano_updater/ui/install_window.py:37
-msgid "Updater"
-msgstr "アップデーター"
-
 #: ../kano_updater/ui/install_window.py:78
 msgid "The install quit unexpectedly"
 msgstr "インストールが予告無く終了しました"
@@ -300,13 +351,13 @@ msgid ""
 "the world. You can also search for the white rabbit on <b>http://world.kano."
 "me</b>"
 msgstr ""
-"1978年に一番早いコンピューターはCray 1（クレイ・ワン）で、おおよそ700万ドル"
-"でとても高くて、重さは像と同じくらいだった！　それに比べて、KanoはCray 1より"
-"約４倍速いんだ。　今、Kanoを最新の状態に保つために、新しいゲームやアプリや"
-"プロジェクトをダウンロードし、コンピューターのメモリーに伝達している。"
-"15分くらい掛かる予定です。その間、Kanoの写真を撮ってみませんか？"
-"また、写真を<b>hello@kano.me</b>に送ってもらえれば、世界と共有しちゃう！"
-"その他に、<b>http://world.kano.me</b>で白いうさぎさんを探してみては？"
+"1978年に一番早いコンピューターはCray 1（クレイ・ワン）で、おおよそ700万ドルで"
+"とても高くて、重さは像と同じくらいだった！　それに比べて、KanoはCray 1より約"
+"４倍速いんだ。　今、Kanoを最新の状態に保つために、新しいゲームやアプリやプロ"
+"ジェクトをダウンロードし、コンピューターのメモリーを軽くしている。15分くらい"
+"掛かる予定です。その間、Kanoの写真を撮ってみませんか？また、写真を"
+"<b>hello@kano.me</b>に送ってもらえれば、世界と共有しちゃう！その他に、"
+"<b>http://world.kano.me</b>で白いうさぎさんを探してみては？"
 
 #: ../kano_updater/ui/stage_text.py:44
 msgid ""
@@ -401,9 +452,10 @@ msgstr "{}するにはENTERを押してください"
 
 #: ../kano_updater/ui/views/install.py:53
 msgid "Do you want to play a cool game instead? PRESS [J] TO LAUNCH!"
-msgstr "待っている間に、面白いゲームをやってみませんか？ スタートするには[J]を！"
+msgstr ""
+"待っている間に、面白いゲームをやってみませんか？ スタートするには[J]を！"
 
-#: ../kano_updater/ui/views/install.py:134
+#: ../kano_updater/ui/views/install.py:135
 msgid "Time flies - {}% already!"
 msgstr "早い！　既に{}％終わってます"
 

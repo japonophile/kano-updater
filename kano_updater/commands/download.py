@@ -101,10 +101,10 @@ def download(progress=None, gui=True):
 
     if status.is_urgent:
         priority = Priority.URGENT
-        logger.info('Urgent update detected, bumping to normal priority')
+        logger.info(u'Urgent update detected, bumping to normal priority')
         make_normal_prio()
 
-    logger.debug('Downloading with priority {}'.format(priority.priority))
+    logger.debug(u'Downloading with priority {}'.format(priority.priority))
 
     try:
         success = do_download(progress, status, priority=priority, dialog_proc=dialog_proc)

@@ -126,9 +126,9 @@ class Install(Gtk.Overlay):
         current_text = STAGE_TEXT[int(idx)]
         self._psa.set_markup(current_text)
 
-        #if self._progress_phase.get_text() != msg:
-        #    self._progress_phase.set_text(msg)
-        self._progress_phase.set_text(msg)
+        msg = msg.decode('utf-8')
+        if self._progress_phase.get_text() != msg:
+            self._progress_phase.set_text(msg)
 
         self._progress_subphase.set_text(sub_msg)
         self._percent_display.set_text(
@@ -145,5 +145,5 @@ class Install(Gtk.Overlay):
                 os.system('{} &'.format(FLAPPY_PATH))
 
         except:
-            logger.error('Unexpected error in _launch_game()\n{}'
+            logger.error(u'Unexpected error in _launch_game()\n{}'
                          .format(traceback.format_exc))
