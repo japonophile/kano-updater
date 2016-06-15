@@ -596,3 +596,10 @@ def show_kano_dialog(title, description, buttons, blocking=True):
         retval = run_bg('exec ' + cmd)
 
     return retval
+
+
+def to_unicode(string):
+    if type(string).__name__ is "str":
+        return string.decode('utf-8')
+    return string
+

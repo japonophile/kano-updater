@@ -10,6 +10,7 @@ import sys
 import apt
 
 from kano_updater.progress import Phase
+from kano_updater.utils import to_unicode
 
 
 class AptDownloadProgress(apt.progress.base.AcquireProgress):
@@ -73,7 +74,7 @@ class AptOpProgress(apt.progress.base.OpProgress):
     def _get_op_key(self, op_name):
         template = u"{prefix}-{{}}".format(prefix=self._phase_name)
 
-        op_name = op_name.decode('utf-8')
+        op_name = to_unicode(op_name)
         return template.format(op_name).lower().replace(u' ', u'-')
 
     def _next_phase(self):

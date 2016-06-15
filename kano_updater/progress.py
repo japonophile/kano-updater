@@ -9,6 +9,7 @@ import os
 import sys
 
 from kano.logging import logger
+from kano_updater.utils import to_unicode
 
 
 class ProgressError(Exception):
@@ -146,10 +147,10 @@ class Progress(object):
         phase.step = 0
 
     def set_step(self, phase_name, step, msg):
-        phase_name = phase_name.decode('utf-8')
+        phase_name = to_unicode(phase_name)
         phase = self._get_phase_by_name(phase_name)
         phase.step = step
-        msg = msg.decode('utf-8')
+        msg = to_unicode(msg)
 
         log = u"global({}%) local({}%): " \
               u"Next step in '{}' ({})  [main phase '{}' ({})]: {}".format(
