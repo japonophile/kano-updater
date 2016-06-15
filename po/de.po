@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kano-updater\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-14 21:34+0900\n"
+"POT-Creation-Date: 2016-06-15 00:00+0900\n"
 "PO-Revision-Date: 2015-02-13 17:16+0100\n"
 "Last-Translator:  <kontakt@hanno.de>\n"
 "Language-Team: German <kontakt@hanno.de>\n"
@@ -420,6 +420,14 @@ msgstr ""
 msgid "Update complete!"
 msgstr ""
 
+#: ../kano_updater/ui/views/finish.py:30
+msgid "shutdown"
+msgstr ""
+
+#: ../kano_updater/ui/views/finish.py:32
+msgid "restart"
+msgstr ""
+
 #: ../kano_updater/ui/views/finish.py:34
 msgid ""
 "Your Kano is up to date and \n"
@@ -432,6 +440,10 @@ msgstr ""
 
 #: ../kano_updater/ui/views/install.py:53
 msgid "Do you want to play a cool game instead? PRESS [J] TO LAUNCH!"
+msgstr ""
+
+#: ../kano_updater/ui/views/install.py:134
+msgid "Time flies - {}% already!"
 msgstr ""
 
 #: ../kano_updater/ui/views/relaunch.py:24

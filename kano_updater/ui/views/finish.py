@@ -27,16 +27,16 @@ class Finish(Countdown):
         self._shutdown_scheduled = status.is_shutdown
 
         if self._shutdown_scheduled:
-            finish_method = 'shutdown'
+            finish_method = _('shutdown')
         else:
-            finish_method = 'restart'
+            finish_method = _('restart')
 
         info = Gtk.Label(_('Your Kano is up to date and \n'
-                           'will automatically {} in 10 seconds'.format(finish_method)))
+                           'will automatically {} in 10 seconds').format(finish_method))
         info.set_justify(Gtk.Justification.CENTER)
         info.get_style_context().add_class('countdown')
 
-        instructions = Gtk.Label(_('Press ENTER to {} now'.format(finish_method)))
+        instructions = Gtk.Label(_('Press ENTER to {} now').format(finish_method))
         instructions.get_style_context().add_class('finish-now')
 
         self._main_grid.attach(complete, 0, 1, 1, 1)

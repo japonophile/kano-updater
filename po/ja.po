@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kano-updater\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-14 21:34+0900\n"
+"POT-Creation-Date: 2016-06-15 00:00+0900\n"
 "PO-Revision-Date: 2016-06-03 22:59+0900\n"
 "Last-Translator: Choppin Antoine <antoine@japonophile.com>\n"
 "Language-Team: Japanese\n"
@@ -180,8 +180,8 @@ msgid ""
 "Unfortunately, your version of Kano OS is too old to be updated through the "
 "updater."
 msgstr ""
-"まことに申し訳ありませんが、アップデーターでアップデートするにはKano OSが"
-"古すぎます。"
+"まことに申し訳ありませんが、アップデーターでアップデートするにはKano OSが古す"
+"ぎます。"
 
 #: ../kano_updater/commands/install.py:275
 msgid "You will need to download the image of the OS and reflash your SD card."
@@ -235,7 +235,7 @@ msgid ""
 "of minutes your Kano will be fresher than ever"
 msgstr ""
 "ダウンロードが終わると準備完了！数分経ったら\n"
-"君のKanoが今までに見たことない若返りします。"
+"Kanoが今までに見たことない若返りします。"
 
 #: ../kano_updater/ui/available_window.py:130
 msgid "Install"
@@ -300,6 +300,13 @@ msgid ""
 "the world. You can also search for the white rabbit on <b>http://world.kano."
 "me</b>"
 msgstr ""
+"1978年に一番早いコンピューターはCray 1（クレイ・ワン）で、おおよそ700万ドル"
+"でとても高くて、重さは像と同じくらいだった！　それに比べて、KanoはCray 1より"
+"約４倍速いんだ。　今、Kanoを最新の状態に保つために、新しいゲームやアプリや"
+"プロジェクトをダウンロードし、コンピューターのメモリーに伝達している。"
+"15分くらい掛かる予定です。その間、Kanoの写真を撮ってみませんか？"
+"また、写真を<b>hello@kano.me</b>に送ってもらえれば、世界と共有しちゃう！"
+"その他に、<b>http://world.kano.me</b>で白いうさぎさんを探してみては？"
 
 #: ../kano_updater/ui/stage_text.py:44
 msgid ""
@@ -364,7 +371,7 @@ msgid ""
 "\n"
 "See you in a while…"
 msgstr ""
-"君のKanoは間も無く再起動します！\n"
+"Kanoは間も無く再起動します！\n"
 "\n"
 "また後ほど…"
 
@@ -372,12 +379,20 @@ msgstr ""
 msgid "Update complete!"
 msgstr "アップデート完了！"
 
+#: ../kano_updater/ui/views/finish.py:30
+msgid "shutdown"
+msgstr "シャットダウン"
+
+#: ../kano_updater/ui/views/finish.py:32
+msgid "restart"
+msgstr "再起動"
+
 #: ../kano_updater/ui/views/finish.py:34
 msgid ""
 "Your Kano is up to date and \n"
 "will automatically {} in 10 seconds"
 msgstr ""
-"君のKanoは最新状況です。\n"
+"Kanoは最新状況です。\n"
 "10秒後に自動的に{}されます。"
 
 #: ../kano_updater/ui/views/finish.py:39
@@ -386,7 +401,11 @@ msgstr "{}するにはENTERを押してください"
 
 #: ../kano_updater/ui/views/install.py:53
 msgid "Do you want to play a cool game instead? PRESS [J] TO LAUNCH!"
-msgstr "それより、面白いゲームをやってみますか？スタートするには[J]を！"
+msgstr "待っている間に、面白いゲームをやってみませんか？ スタートするには[J]を！"
+
+#: ../kano_updater/ui/views/install.py:134
+msgid "Time flies - {}% already!"
+msgstr "早い！　既に{}％終わってます"
 
 #: ../kano_updater/ui/views/relaunch.py:24
 msgid "Relaunching the Updater"
@@ -403,8 +422,8 @@ msgid ""
 "\n"
 "If you still have problems, we can help at http://help.kano.me"
 msgstr ""
-"アップデート中に問題が発生しました。インターネットに接続していることを"
-"今一度確認して、もう一度試してください。\n"
+"アップデート中に問題が発生しました。インターネットに接続していることを今一度"
+"確認して、もう一度試してください。\n"
 "\n"
 "それでもうまくいかない場合は、http://help.kano.meでヘルプを求めてください。"
 

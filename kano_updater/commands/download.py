@@ -87,11 +87,11 @@ def download(progress=None, gui=True):
     # show a dialog informing the user of an automatic urgent download
     if status.is_urgent and not gui:
         # TODO: mute notifications?
-        title = "Updater"
-        description = "Kano HQ has just released a critical update that will repair" \
-                      " some important things on your system! We'll download these automatically," \
-                      " and ask you to schedule the install when they finish."
-        buttons = "OK:green:1"
+        title = _("Updater")
+        description = _("Kano HQ has just released a critical update that will repair" +\
+                      " some important things on your system! We'll download these automatically," +\
+                      " and ask you to schedule the install when they finish.")
+        buttons = _("OK:green:1")
         dialog_proc = show_kano_dialog(title, description, buttons, blocking=False)
 
     status.state = UpdaterStatus.DOWNLOADING_UPDATES
@@ -127,19 +127,19 @@ def do_download(progress, status, priority=Priority.NONE, dialog_proc=None):
     progress.split(
         Phase(
             'downloading-pip-pkgs',
-            'Downloading Python packages',
+            _('Downloading Python packages'),
             10,
             is_main=True
         ),
         Phase(
             'updating-sources',
-            'Updating apt sources',
+            _('Updating apt sources'),
             40,
             is_main=True
         ),
         Phase(
             'downloading-apt-packages',
-            'Downloading apt packages',
+            _('Downloading apt packages'),
             50,
             is_main=True
         )
@@ -148,7 +148,7 @@ def do_download(progress, status, priority=Priority.NONE, dialog_proc=None):
     _cache_pip_packages(progress, priority=priority)
     _cache_deb_packages(progress, priority=priority)
 
-    progress.finish('Done downloading')
+    progress.finish(_('Done downloading'))
 
     # kill the dialog if it is still on
     if dialog_proc:
@@ -177,7 +177,7 @@ def _cache_pip_packages(progress, priority=Priority.NONE):
     progress.init_steps(phase_name, len(packages))
 
     for pkg in packages:
-        progress.next_step(phase_name, "Downloading {}".format(pkg))
+        progress.next_step(phase_name, _("Downloading {}").format(pkg))
 
         # The `--no-install` parameter has been deprecated in pip. However, the
         # version of pip in wheezy doesn't yet support the new approach which
@@ -188,7 +188,7 @@ def _cache_pip_packages(progress, priority=Priority.NONE):
 
         # TODO: abort the install?
         if not success:
-            msg = "Downloading the '{}' pip package failed.".format(pkg)
+            msg = _("Downloading the '{}' pip package failed.").format(pkg)
             logger.error(msg)
 
 
