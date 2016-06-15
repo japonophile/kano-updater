@@ -10,7 +10,7 @@ import sys
 import apt
 
 from kano_updater.progress import Phase
-from kano_updater.utils import to_unicode
+from kano_updater.i18n import to_unicode
 
 
 class AptDownloadProgress(apt.progress.base.AcquireProgress):

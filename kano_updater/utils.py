@@ -598,8 +598,3 @@ def show_kano_dialog(title, description, buttons, blocking=True):
     return retval
 
 
-def to_unicode(string):
-    if type(string).__name__ is "str":
-        return string.decode('utf-8')
-    return string
-
