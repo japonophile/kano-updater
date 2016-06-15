@@ -275,7 +275,7 @@ def install_standard(progress, status):
         description = _('You will need to download the image of the '
                         'OS and reflash your SD card.')
 
-        msg = "{}: {}".format(title, description)
+        msg = u"{}: {}".format(title, description)
         logger.error("Updating from a version that is no longer supported ({})"
                      .format(system_version))
         progress.fail(msg)
@@ -283,8 +283,8 @@ def install_standard(progress, status):
 
     old_updater = apt_handle.get_package('kano-updater').installed.version
 
-    #progress.start('updating-itself')
-    #apt_handle.upgrade('kano-updater', progress)
+    progress.start('updating-itself')
+    apt_handle.upgrade('kano-updater', progress)
 
     # relaunch if the updater has changed
     new_updater = apt_handle.get_package('kano-updater')

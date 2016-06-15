@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kano-updater\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-15 22:04+0900\n"
+"POT-Creation-Date: 2016-06-15 23:45+0900\n"
 "PO-Revision-Date: 2015-02-13 17:16+0100\n"
 "Last-Translator:  <kontakt@hanno.de>\n"
 "Language-Team: German <kontakt@hanno.de>\n"
@@ -252,19 +252,11 @@ msgstr ""
 msgid "Installing {}"
 msgstr ""
 
-#: ../kano_updater/progress.py:296
-msgid "ERROR: {}"
-msgstr ""
-
-#: ../kano_updater/progress.py:299
-msgid "Aborting {}, {}"
-msgstr ""
-
-#: ../kano_updater/progress.py:309
+#: ../kano_updater/progress.py:310
 msgid "No tty, selecting the default answer for '{}' which is: {}"
 msgstr ""
 
-#: ../kano_updater/progress.py:320
+#: ../kano_updater/progress.py:321
 msgid "Type one of these:  {}"
 msgstr ""
 

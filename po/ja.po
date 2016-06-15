@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kano-updater\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-15 22:04+0900\n"
+"POT-Creation-Date: 2016-06-15 23:45+0900\n"
 "PO-Revision-Date: 2016-06-03 22:59+0900\n"
 "Last-Translator: Choppin Antoine <antoine@japonophile.com>\n"
 "Language-Team: Japanese\n"
@@ -252,19 +252,11 @@ msgstr "アップデートの後処理が失敗しました。"
 msgid "Installing {}"
 msgstr "{}をインストール中"
 
-#: ../kano_updater/progress.py:296
-msgid "ERROR: {}"
-msgstr "エラー：{}"
-
-#: ../kano_updater/progress.py:299
-msgid "Aborting {}, {}"
-msgstr "{}を中断します：{}"
-
-#: ../kano_updater/progress.py:309
+#: ../kano_updater/progress.py:310
 msgid "No tty, selecting the default answer for '{}' which is: {}"
 msgstr "ttyが無い為、'{}'に対するデフォルト回答（{}）を選択します"
 
-#: ../kano_updater/progress.py:320
+#: ../kano_updater/progress.py:321
 msgid "Type one of these:  {}"
 msgstr "次の中から選んでください： {}"
 
@@ -366,8 +358,8 @@ msgid ""
 "me</b>"
 msgstr ""
 "1978年に一番早いコンピューターはCray 1（クレイ・ワン）で、おおよそ700万ドルで"
-"とても高くて、重さは像と同じくらいだった！　それに比べて、KanoはCray 1より約"
-"４倍速いんだ。　今、Kanoを最新の状態に保つために、新しいゲームやアプリやプロ"
+"とても高くて、重さは像と同じくらいだった！それに比べて、KanoはCray 1より約"
+"４倍速いんだ。今、Kanoを最新の状態に保つために、新しいゲームやアプリやプロ"
 "ジェクトをダウンロードし、コンピューターのメモリーを軽くしている。15分くらい"
 "掛かる予定です。その間、Kanoの写真を撮ってみませんか？また、写真を"
 "<b>hello@kano.me</b>に送ってもらえれば、世界と共有しちゃう！その他に、"
@@ -384,6 +376,14 @@ msgid ""
 "tiny switches, called transistors, in its brain. In your brain, these "
 "switches are cells called neurons. They're talking to each other right now."
 msgstr ""
+"コンピューターは新しいアイディアを覚えるのは早い。今、アップデーターツールを"
+"アップデートしている。これが終わったら、アップデーターを再起動する。コンピュ"
+"ーターはどのように考えているだろう？お互いと賢く繋がっている電気スイッチで"
+"構成されている。スイッチがオンならば、「はい」又は「１」と言う意味で、スイッチ"
+"がオフならば、「いいえ」又は「０」と言う意味です。この小さい「はい-いいえ」"
+"スイッチはバイナリーコードになり、単語、音、規則などを表せる。あなたのコンピュ"
+"ーターの頭脳には、トランジスタと言うとても小さいスイッチを持っている。人間の"
+"頭脳ではこのスイッチは神経細胞になります。どの時にもお互いと話し合っている。"
 
 #: ../kano_updater/ui/stage_text.py:57
 msgid ""
