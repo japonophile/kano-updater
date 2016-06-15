@@ -126,8 +126,9 @@ class Install(Gtk.Overlay):
         current_text = STAGE_TEXT[int(idx)]
         self._psa.set_markup(current_text)
 
-        if self._progress_phase.get_text() != msg:
-            self._progress_phase.set_text(msg)
+        #if self._progress_phase.get_text() != msg:
+        #    self._progress_phase.set_text(msg)
+        self._progress_phase.set_text(msg)
 
         self._progress_subphase.set_text(sub_msg)
         self._percent_display.set_text(

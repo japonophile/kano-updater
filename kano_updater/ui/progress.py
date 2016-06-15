@@ -24,17 +24,17 @@ class GtkProgress(Progress):
                       phase.get_main_phase().label, phase.get_main_phase().name, msg)
 
     def _error(self, phase, msg):
-        err_msg = "Error {} - {}".format(phase.label.lower(), msg)
+        err_msg = u"Error {} - {}".format(phase.label.lower(), msg)
         GLib.idle_add(self._window.error, err_msg)
 
     def _abort(self, phase, msg):
         kill_flappy_judoka()
-        err_msg = "{} - {}".format(phase.label.lower(), msg)
+        err_msg = u"{} - {}".format(phase.label.lower(), msg)
         GLib.idle_add(self._window.error, err_msg)
 
     def _done(self, msg):
         GLib.idle_add(self._window.update_progress, 100,
-                      "Complete!", '', msg)
+                      _("Complete!"), '', msg)
 
     def _prompt(self, msg, question, answers):
         GLib.idle_add(self._window.user_prompt, msg, question, answers)
