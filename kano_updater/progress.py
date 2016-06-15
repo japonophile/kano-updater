@@ -146,6 +146,7 @@ class Progress(object):
         phase.step = 0
 
     def set_step(self, phase_name, step, msg):
+        phase_name = phase_name.decode('utf-8')
         phase = self._get_phase_by_name(phase_name)
         phase.step = step
         msg = msg.decode('utf-8')
@@ -293,10 +294,10 @@ class CLIProgress(Progress):
         print u"{}%: {}".format(phase.global_percent, msg)
 
     def _error(self, phase, msg):
-        print _("ERROR: {}").format(msg)
+        print u"ERROR: {}".format(msg)
 
     def _abort(self, phase, msg):
-        print _("Aborting {}, {}").format(phase.label, msg)
+        print u"Aborting {}, {}".format(phase.label, msg)
 
     def _done(self, msg):
         print msg
