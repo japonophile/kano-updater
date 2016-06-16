@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kano-updater\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-15 23:45+0900\n"
+"POT-Creation-Date: 2016-06-16 21:47+0900\n"
 "PO-Revision-Date: 2016-06-03 22:59+0900\n"
 "Last-Translator: Choppin Antoine <antoine@japonophile.com>\n"
 "Language-Team: Japanese\n"
@@ -57,21 +57,25 @@ msgstr "APTソースをアップデート中"
 msgid "Initialising apt cache"
 msgstr "APTキャッシュを初期化中"
 
+#: ../kano_updater/apt_wrapper.py:64
+msgid "Failed to update sources"
+msgstr "ソースのアップデートが失敗しました"
+
 #: ../kano_updater/apt_wrapper.py:125 ../kano_updater/apt_wrapper.py:152
 msgid "Downloading packages"
-msgstr "パッケージをダウンロード中"
+msgstr "パッケージをダウンロードしています"
 
 #: ../kano_updater/apt_wrapper.py:126 ../kano_updater/apt_wrapper.py:153
 msgid "Installing packages"
-msgstr "パッケージをインストール中"
+msgstr "パッケージをインストールしています"
 
 #: ../kano_updater/apt_wrapper.py:230
 msgid "Cleaning dpkg journal"
-msgstr "DPKGジャーナル掃除中"
+msgstr "DPKGジャーナル掃除しています"
 
 #: ../kano_updater/apt_wrapper.py:232
 msgid "Fixing broken packages"
-msgstr "壊れたパッケージを修理中"
+msgstr "壊れたパッケージを修理しています"
 
 #: ../kano_updater/auxiliary_tasks.py:21
 msgid "Updating home folders from template"
@@ -182,6 +186,14 @@ msgstr "'{}'と言うpipパッケージのダウンロードが失敗しまし�
 msgid "Only {}MB free, at least 1GB is needed."
 msgstr "1GB必要ですが、空き容量は{}MBしかありません。"
 
+#: ../kano_updater/commands/install.py:52
+msgid "Not enough space to update!"
+msgstr "アップデートするには空き容量が足りません！"
+
+#: ../kano_updater/commands/install.py:53
+msgid "But I can make more room if you'd like?"
+msgstr "こちらで容量を空けようか？"
+
 #: ../kano_updater/commands/install.py:88
 msgid "Installing updates"
 msgstr "アップデートをインストール中"
@@ -191,6 +203,14 @@ msgstr "アップデートをインストール中"
 #: ../kano_updater/ui/install_window.py:130
 msgid "Update completed"
 msgstr "アップデート完了"
+
+#: ../kano_updater/commands/install.py:156
+msgid "The install is already running"
+msgstr "インストールは既に実行中です"
+
+#: ../kano_updater/commands/install.py:162
+msgid "tried to install non-independent package {} using update_ind_pkg"
+msgstr "update_ind_pkgで非独立パッケージ{}をインストールしてみました"
 
 #: ../kano_updater/commands/install.py:189
 msgid "Installing Hotfix"
@@ -252,11 +272,11 @@ msgstr "アップデートの後処理が失敗しました。"
 msgid "Installing {}"
 msgstr "{}をインストール中"
 
-#: ../kano_updater/progress.py:310
+#: ../kano_updater/progress.py:311
 msgid "No tty, selecting the default answer for '{}' which is: {}"
 msgstr "ttyが無い為、'{}'に対するデフォルト回答（{}）を選択します"
 
-#: ../kano_updater/progress.py:321
+#: ../kano_updater/progress.py:322
 msgid "Type one of these:  {}"
 msgstr "次の中から選んでください： {}"
 
@@ -358,12 +378,12 @@ msgid ""
 "me</b>"
 msgstr ""
 "1978年に一番早いコンピューターはCray 1（クレイ・ワン）で、おおよそ700万ドルで"
-"とても高くて、重さは像と同じくらいだった！それに比べて、KanoはCray 1より約"
-"４倍速いんだ。今、Kanoを最新の状態に保つために、新しいゲームやアプリやプロ"
-"ジェクトをダウンロードし、コンピューターのメモリーを軽くしている。15分くらい"
-"掛かる予定です。その間、Kanoの写真を撮ってみませんか？また、写真を"
-"<b>hello@kano.me</b>に送ってもらえれば、世界と共有しちゃう！その他に、"
-"<b>http://world.kano.me</b>で白いうさぎさんを探してみては？"
+"とても高くて、重さは像と同じくらいだった！それに比べて、KanoはCray 1より約４"
+"倍速いんだ。今、Kanoを最新の状態に保つために、新しいゲームやアプリやプロジェ"
+"クトをダウンロードし、コンピューターのメモリーを軽くしている。15分くらい掛か"
+"る予定です。その間、Kanoの写真を撮ってみませんか？また、写真を<b>hello@kano."
+"me</b>に送ってもらえれば、世界と共有しちゃう！その他に、<b>http://world.kano."
+"me</b>で白いうさぎさんを探してみては？"
 
 #: ../kano_updater/ui/stage_text.py:44
 msgid ""
@@ -377,13 +397,14 @@ msgid ""
 "switches are cells called neurons. They're talking to each other right now."
 msgstr ""
 "コンピューターは新しいアイディアを覚えるのは早い。今、アップデーターツールを"
-"アップデートしている。これが終わったら、アップデーターを再起動する。コンピュ"
-"ーターはどのように考えているだろう？お互いと賢く繋がっている電気スイッチで"
-"構成されている。スイッチがオンならば、「はい」又は「１」と言う意味で、スイッチ"
-"がオフならば、「いいえ」又は「０」と言う意味です。この小さい「はい-いいえ」"
-"スイッチはバイナリーコードになり、単語、音、規則などを表せる。あなたのコンピュ"
-"ーターの頭脳には、トランジスタと言うとても小さいスイッチを持っている。人間の"
-"頭脳ではこのスイッチは神経細胞になります。どの時にもお互いと話し合っている。"
+"アップデートしている。これが終わったら、アップデーターを再起動する。コン"
+"ピューターはどのように考えているだろう？お互いと賢く繋がっている電気スイッチ"
+"で構成されている。スイッチがオンならば、「はい」又は「１」と言う意味で、ス"
+"イッチがオフならば、「いいえ」又は「０」と言う意味です。この小さい「はい-いい"
+"え」スイッチはバイナリーコードになり、単語、音、規則などを表せる。あなたのコ"
+"ンピューターの頭脳には、トランジスタと言うとても小さいスイッチを持っている。"
+"人間の頭脳ではこのスイッチは神経細胞になります。どの時にもお互いと話し合って"
+"いる。"
 
 #: ../kano_updater/ui/stage_text.py:57
 msgid ""
@@ -397,6 +418,15 @@ msgid ""
 "\"Gangnam Style\" from YouTube, and move millions of dollars in the New York "
 "Stock Exchange."
 msgstr ""
+"パイソン(Python)は世界中で流行っているプログラミング言語の一つです。"
+"プログラミング言語は、人間が理解できる言葉をコンピューターのスイッチが理解"
+"できる命令へ翻訳するものです。例えば、「サンドウィッチを作る」為のプログラムは"
+"「パンを取る」、「ナイフを取る」、「パンをお皿に置く」など、サンドウィッチを"
+"作る為に必要なステップを順番で実行していくのです。コックさんが日本語で書かれて"
+"いるレシピに沿って料理をすると同じように、コンピューターはパイソンで書かれて"
+"いるプログラムを実行します。パイソンはマインクラフトで火山を作ったり、ユー"
+"チューブから「ガンダムスタイル」をダウンロードしたり、又はニューヨーク株で"
+"何億ドルを動かしたりすることができるのです。"
 
 #: ../kano_updater/ui/stage_text.py:71
 msgid ""
@@ -410,6 +440,17 @@ msgid ""
 "powerup ideas. Want a look inside Kano HQ? Hang with our wizards at <b>blog."
 "kano.me</b>"
 msgstr ""
+"\"Kano\"と言う名前の由来は、嘉納治五郎(かのうじごろう)から来ています。"
+"日本の先生で「柔道の父」と呼ばれています。彼のモットーは：「精力善用」で"
+"心身の持つすべての力を最大限に生かして、社会のために善い方向に用いると言う"
+"意味です。また、ギリシャ語でKanoは「私が作る」と言う意味です。（Kanoは"
+"北ニジェリアの市場大きい街でもあるのす）。Kanoは他のコンピューターとどう"
+"違うのでしょう？Kanoの頭脳にある全てのアイディアは完全に公開されています。"
+"<b>github.com/KanoComputing</b>に行けば、Kanoのソースコードが見られます。"
+"そしてKanoは形を変えられて、ロボット、サーバー、ラジオなどに変身できます。"
+"<b>world.kano.me/projects</b>で素晴らしいアイディアが載っています。"
+"Kano本社の中を見たいですか？<b>blog.kano.me</b>でKanoの魔法使いにお会い"
+"出来ます。"
 
 #: ../kano_updater/ui/stage_text.py:83
 msgid ""
@@ -421,6 +462,13 @@ msgid ""
 "Station also uses to run its robotic systems — to keep the astronauts from "
 "losing their lunch!"
 msgstr ""
+"Kano OSはオペレーティング・システムで、全てのプログラムをお互いと接続して"
+"います。このOSはLinuxに基づいていて、オープンソースになっています。つまり、"
+"誰でもが自由にダウンロードや修正でき、売ることもできます。このコードはプロ"
+"だけでなく、世界中の多くのアマチュアやメーカーが協力して書いています。"
+"KanoはDebianと言うLinuxの面白いディストリビューション（配布パッケージ）を"
+"使っていて、国際宇宙ステーションのロボットシステムで宇宙飛行士のお世話をする"
+"為にも使われています。"
 
 #: ../kano_updater/ui/stage_text.py:94
 msgid ""
@@ -429,6 +477,11 @@ msgid ""
 "more. Your computer is open, and its powers are at your command. If you want "
 "to get new cool projects from us each week, join the community at"
 msgstr ""
+"もう少しで終わりです！あなたのKanoコンピューターでは面白いゲームや音楽を作り、"
+"家でビデオを見たり、ストーリーを語ったりすることが出来るのです。あなたの"
+"コンピューターは完全にオープンで、その力を制御できます。"
+"面白い新しいプロジェクトを毎週手に入れるには、コミュニティーにこちらから"
+"参加してみよう。"
 
 #: ../kano_updater/ui/stage_text.py:101
 msgid ""

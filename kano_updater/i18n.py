@@ -6,7 +6,7 @@
 # I18n helpers for the updater
 
 def to_unicode(string):
-    if type(string).__name__ is "str":
+    if type(string).__name__ == "str":
         return string.decode('utf-8')
     return string
 

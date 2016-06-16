@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kano-updater\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-15 23:45+0900\n"
+"POT-Creation-Date: 2016-06-16 21:47+0900\n"
 "PO-Revision-Date: 2015-02-13 17:16+0100\n"
 "Last-Translator:  <kontakt@hanno.de>\n"
 "Language-Team: German <kontakt@hanno.de>\n"
@@ -56,6 +56,10 @@ msgstr ""
 
 #: ../kano_updater/apt_wrapper.py:55
 msgid "Initialising apt cache"
+msgstr ""
+
+#: ../kano_updater/apt_wrapper.py:64
+msgid "Failed to update sources"
 msgstr ""
 
 #: ../kano_updater/apt_wrapper.py:125 ../kano_updater/apt_wrapper.py:152
@@ -180,6 +184,14 @@ msgstr ""
 msgid "Only {}MB free, at least 1GB is needed."
 msgstr ""
 
+#: ../kano_updater/commands/install.py:52
+msgid "Not enough space to update!"
+msgstr ""
+
+#: ../kano_updater/commands/install.py:53
+msgid "But I can make more room if you'd like?"
+msgstr ""
+
 #: ../kano_updater/commands/install.py:88
 msgid "Installing updates"
 msgstr ""
@@ -188,6 +200,14 @@ msgstr ""
 #: ../kano_updater/commands/install.py:181
 #: ../kano_updater/ui/install_window.py:130
 msgid "Update completed"
+msgstr ""
+
+#: ../kano_updater/commands/install.py:156
+msgid "The install is already running"
+msgstr ""
+
+#: ../kano_updater/commands/install.py:162
+msgid "tried to install non-independent package {} using update_ind_pkg"
 msgstr ""
 
 #: ../kano_updater/commands/install.py:189
@@ -252,11 +272,11 @@ msgstr ""
 msgid "Installing {}"
 msgstr ""
 
-#: ../kano_updater/progress.py:310
+#: ../kano_updater/progress.py:311
 msgid "No tty, selecting the default answer for '{}' which is: {}"
 msgstr ""
 
-#: ../kano_updater/progress.py:321
+#: ../kano_updater/progress.py:322
 msgid "Type one of these:  {}"
 msgstr ""
 

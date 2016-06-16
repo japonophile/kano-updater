@@ -46,11 +46,11 @@ def install(progress=None, gui=True):
     # TODO: Take this value from apt
     mb_free = get_free_space()
     if mb_free < 1024:
-        err_msg = _("Only {}MB free, at least 1GB is needed.".format(mb_free))
+        err_msg = _("Only {}MB free, at least 1GB is needed.").format(mb_free)
         logger.warn(err_msg)
         answer = progress.prompt(
-            'Not enough space to update!',
-            'But I can make more room if you\'d like?',
+            _('Not enough space to update!'),
+            _('But I can make more room if you\'d like?'),
             ['OK', 'CANCEL']
         )
 
@@ -153,15 +153,15 @@ def install_ind_package(progress, package):
     if status.state not in [UpdaterStatus.NO_UPDATES,
                             UpdaterStatus.UPDATES_AVAILABLE,
                             UpdaterStatus.UPDATES_INSTALLED]:
-        msg = 'The install is already running'
+        msg = N_('The install is already running')
         logger.warn(msg)
         progress.abort(_(msg))
         return False
 
     if package not in status.updatable_independent_packages:
-        msg = 'tried to install non-independent package {} using update_ind_pkg'.format(package)
-        logger.warn(msg)
-        progress.abort(_(msg))
+        msg = N_('tried to install non-independent package {} using update_ind_pkg')
+        logger.warn(msg.format(package))
+        progress.abort(_(msg).format(package))
         return False        
 
     status.state = UpdaterStatus.INSTALLING_INDEPENDENT
