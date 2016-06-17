@@ -11,7 +11,7 @@ from kano.logging import logger
 
 from kano_updater.os_version import OSVersion, TARGET_VERSION
 from kano_updater.utils import install, remove_user_files, update_failed, \
-    purge, rclocal_executable, migrate_repository, get_users
+    purge, rclocal_executable, migrate_repository, get_users, run_for_every_user
 from kano.utils import run_cmd_log, get_user_unsudoed, write_file_contents, \
     is_installed
 
@@ -148,6 +148,9 @@ class PreUpdate(Scenarios):
         self.add_scenario("Kanux-Beta-3.1.0", "Kanux-Beta-3.2.0",
                           self.beta_310_to_beta_320)
 
+        self.add_scenario("Kanux-Beta-3.2.0", "Kanux-Beta-3.3.0",
+                          self.beta_320_to_beta_330)
+
     def beta_103_to_beta_110(self):
         pass
 
@@ -230,6 +233,9 @@ class PreUpdate(Scenarios):
     def beta_310_to_beta_320(self):
         pass
 
+    def beta_320_to_beta_330(self):
+        pass
+
     # Not used at the moment: dev.kano.me > repo.kano.me
     def _migrate_repo_url(self):
         migrate_repository('/etc/apt/sources.list.d/kano.list',
@@ -303,6 +309,9 @@ class PostUpdate(Scenarios):
 
         self.add_scenario("Kanux-Beta-3.1.0", "Kanux-Beta-3.2.0",
                           self.beta_310_to_beta_320)
+
+        self.add_scenario("Kanux-Beta-3.2.0", "Kanux-Beta-3.3.0",
+                          self.beta_320_to_beta_330)
 
     def beta_103_to_beta_110(self):
         rclocal_executable()
@@ -491,11 +500,62 @@ class PostUpdate(Scenarios):
                 from kano_settings.boot_config import end_config_transaction
                 end_config_transaction()
             except ImportError:
-                logger.error("end_config_transaciton not present - update to kano-settings failed?")
+                logger.error("end_config_transaction not present - update to kano-settings failed?")
         enable_audio_device()
+
+        # tell kano-overworld to skip onboarding stage
+        run_for_every_user('/usr/bin/luajit /usr/share/kano-overworld/bin/skip-onboarding.lua')
+
+        # tell dashboard to skip Overworld and kit setup onboarding phase
+        run_for_every_user('touch ~/.dashboard-click-onboarding-done')
 
     def beta_300_to_beta_310(self):
         pass
 
     def beta_310_to_beta_320(self):
-        pass
+        config_path = '/boot/config.txt'
+        use_transactions = False
+        # if we can't use transactions, fall back to editting the file directly
+        tmp_path = config_path
+
+        try:
+            try:
+                # append uart config to config.txt
+                from kano_settings.boot_config import _trans, \
+                    end_config_transaction
+
+                use_transactions = True
+                tmp_path = '/tmp/config.tmp'
+                _trans().copy_to(tmp_path)
+
+            except ImportError:
+                pass
+
+            from textwrap import dedent
+            extra_config = dedent("""
+            [pi3]
+            # for light board
+            enable_uart=1
+            [all]
+            """)
+
+            with open(tmp_path, 'a') as tmp_config:
+                tmp_config.write(extra_config)
+
+            if use_transactions:
+                _trans().copy_from(tmp_path)
+
+                end_config_transaction()
+        except:
+            logger.error("failed to update config")
+
+    def beta_320_to_beta_330(self):
+        def disable_audio_dither():
+            from kano_settings.boot_config import set_config_value
+            set_config_value("disable_audio_dither", "1")
+            try:
+                from kano_settings.boot_config import end_config_transaction
+                end_config_transaction()
+            except ImportError:
+                logger.error("end_config_transaction not present")
+        disable_audio_dither()

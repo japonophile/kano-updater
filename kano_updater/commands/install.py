@@ -167,6 +167,25 @@ def install_ind_package(progress, package):
     status.state = UpdaterStatus.INSTALLING_INDEPENDENT
     status.save()
 
+    update_sources_phase = 'updating-sources'
+    installing_idp_phase = 'installing-idp-package'
+    progress.split(
+        Phase(
+            update_sources_phase,
+            _('Updating apt sources'),
+            10
+        ),
+        Phase(
+            installing_idp_phase,
+            _('Installing independent package'),
+            90
+        )
+    )
+
+    progress.start(update_sources_phase)
+    apt_handle.update(progress)
+
+    progress.start(installing_idp_phase)
     apt_handle.upgrade(package, progress)
 
     status.state = previous_state
