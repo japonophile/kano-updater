@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kano-updater\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-16 21:47+0900\n"
+"POT-Creation-Date: 2016-07-06 22:17+0900\n"
 "PO-Revision-Date: 2016-06-03 22:59+0900\n"
 "Last-Translator: Choppin Antoine <antoine@japonophile.com>\n"
 "Language-Team: Japanese\n"
@@ -50,6 +50,7 @@ msgid "No updates found."
 msgstr "アップデートは見つかりません。"
 
 #: ../kano_updater/apt_wrapper.py:54 ../kano_updater/commands/download.py:136
+#: ../kano_updater/commands/install.py:175
 msgid "Updating apt sources"
 msgstr "APTソースをアップデート中"
 
@@ -178,7 +179,7 @@ msgstr "ダウンロード完了"
 msgid "Downloading {}"
 msgstr "{}ダウンロード中"
 
-#: ../kano_updater/commands/download.py:191
+#: ../kano_updater/commands/download.py:190
 msgid "Downloading the '{}' pip package failed."
 msgstr "'{}'と言うpipパッケージのダウンロードが失敗しました"
 
@@ -199,7 +200,7 @@ msgid "Installing updates"
 msgstr "アップデートをインストール中"
 
 #: ../kano_updater/commands/install.py:143
-#: ../kano_updater/commands/install.py:181
+#: ../kano_updater/commands/install.py:200
 #: ../kano_updater/ui/install_window.py:130
 msgid "Update completed"
 msgstr "アップデート完了"
@@ -212,39 +213,43 @@ msgstr "インストールは既に実行中です"
 msgid "tried to install non-independent package {} using update_ind_pkg"
 msgstr "update_ind_pkgで非独立パッケージ{}をインストールしてみました"
 
-#: ../kano_updater/commands/install.py:189
+#: ../kano_updater/commands/install.py:180
+msgid "Installing independent package"
+msgstr "独立したパッケージをインストール中"
+
+#: ../kano_updater/commands/install.py:208
 msgid "Installing Hotfix"
 msgstr "ホットフィックスをインストール中"
 
-#: ../kano_updater/commands/install.py:216
+#: ../kano_updater/commands/install.py:235
 msgid "Starting Update"
 msgstr "アップデートを開始します"
 
-#: ../kano_updater/commands/install.py:222
+#: ../kano_updater/commands/install.py:241
 msgid "Updating Itself"
 msgstr "自己アップデート中"
 
-#: ../kano_updater/commands/install.py:228
+#: ../kano_updater/commands/install.py:247
 msgid "Running The Preupdate Scripts"
 msgstr "アップデートの前処理を実行中"
 
-#: ../kano_updater/commands/install.py:234
+#: ../kano_updater/commands/install.py:253
 msgid "Updating Pip Packages"
 msgstr "Pipパッケージをアップデート中"
 
-#: ../kano_updater/commands/install.py:240
+#: ../kano_updater/commands/install.py:259
 msgid "Updating Deb Packages"
 msgstr "Debパッケージをアップデート中"
 
-#: ../kano_updater/commands/install.py:246
+#: ../kano_updater/commands/install.py:265
 msgid "Running The Postupdate Scripts"
 msgstr "アップデートの後処理を実行中"
 
-#: ../kano_updater/commands/install.py:252
+#: ../kano_updater/commands/install.py:271
 msgid "Performing auxiliary tasks"
 msgstr "追加処理を実施しています"
 
-#: ../kano_updater/commands/install.py:273
+#: ../kano_updater/commands/install.py:292
 msgid ""
 "Unfortunately, your version of Kano OS is too old to be updated through the "
 "updater."
@@ -252,31 +257,31 @@ msgstr ""
 "まことに申し訳ありませんが、アップデーターでアップデートするにはKano OSが古す"
 "ぎます。"
 
-#: ../kano_updater/commands/install.py:275
+#: ../kano_updater/commands/install.py:294
 msgid "You will need to download the image of the OS and reflash your SD card."
 msgstr "OSイメージをダウンロードし、SDカードを焼き直す必要があります。"
 
-#: ../kano_updater/commands/install.py:297
+#: ../kano_updater/commands/install.py:316
 msgid "The updater has been updated, relaunching."
 msgstr "アップデーターがアップデートされました。再起動します。"
 
-#: ../kano_updater/commands/install.py:307
+#: ../kano_updater/commands/install.py:326
 msgid "The pre-update tasks failed."
 msgstr "アップデートの前処理が失敗しました。"
 
-#: ../kano_updater/commands/install.py:324
+#: ../kano_updater/commands/install.py:343
 msgid "The post-update tasks failed."
 msgstr "アップデートの後処理が失敗しました。"
 
-#: ../kano_updater/commands/install.py:349
+#: ../kano_updater/commands/install.py:368
 msgid "Installing {}"
 msgstr "{}をインストール中"
 
-#: ../kano_updater/progress.py:311
+#: ../kano_updater/progress.py:324
 msgid "No tty, selecting the default answer for '{}' which is: {}"
 msgstr "ttyが無い為、'{}'に対するデフォルト回答（{}）を選択します"
 
-#: ../kano_updater/progress.py:322
+#: ../kano_updater/progress.py:335
 msgid "Type one of these:  {}"
 msgstr "次の中から選んでください： {}"
 
@@ -418,15 +423,15 @@ msgid ""
 "\"Gangnam Style\" from YouTube, and move millions of dollars in the New York "
 "Stock Exchange."
 msgstr ""
-"パイソン(Python)は世界中で流行っているプログラミング言語の一つです。"
-"プログラミング言語は、人間が理解できる言葉をコンピューターのスイッチが理解"
-"できる命令へ翻訳するものです。例えば、「サンドウィッチを作る」為のプログラムは"
-"「パンを取る」、「ナイフを取る」、「パンをお皿に置く」など、サンドウィッチを"
-"作る為に必要なステップを順番で実行していくのです。コックさんが日本語で書かれて"
-"いるレシピに沿って料理をすると同じように、コンピューターはパイソンで書かれて"
-"いるプログラムを実行します。パイソンはマインクラフトで火山を作ったり、ユー"
-"チューブから「ガンダムスタイル」をダウンロードしたり、又はニューヨーク株で"
-"何億ドルを動かしたりすることができるのです。"
+"パイソン(Python)は世界中で流行っているプログラミング言語の一つです。プログラ"
+"ミング言語は、人間が理解できる言葉をコンピューターのスイッチが理解できる命令"
+"へ翻訳するものです。例えば、「サンドウィッチを作る」為のプログラムは「パンを"
+"取る」、「ナイフを取る」、「パンをお皿に置く」など、サンドウィッチを作る為に"
+"必要なステップを順番で実行していくのです。コックさんが日本語で書かれているレ"
+"シピに沿って料理をすると同じように、コンピューターはパイソンで書かれているプ"
+"ログラムを実行します。パイソンはマインクラフトで火山を作ったり、ユーチューブ"
+"から「ガンダムスタイル」をダウンロードしたり、又はニューヨーク株で何億ドルを"
+"動かしたりすることができるのです。"
 
 #: ../kano_updater/ui/stage_text.py:71
 msgid ""
@@ -440,17 +445,16 @@ msgid ""
 "powerup ideas. Want a look inside Kano HQ? Hang with our wizards at <b>blog."
 "kano.me</b>"
 msgstr ""
-"\"Kano\"と言う名前の由来は、嘉納治五郎(かのうじごろう)から来ています。"
-"日本の先生で「柔道の父」と呼ばれています。彼のモットーは：「精力善用」で"
-"心身の持つすべての力を最大限に生かして、社会のために善い方向に用いると言う"
-"意味です。また、ギリシャ語でKanoは「私が作る」と言う意味です。（Kanoは"
-"北ニジェリアの市場大きい街でもあるのす）。Kanoは他のコンピューターとどう"
-"違うのでしょう？Kanoの頭脳にある全てのアイディアは完全に公開されています。"
-"<b>github.com/KanoComputing</b>に行けば、Kanoのソースコードが見られます。"
-"そしてKanoは形を変えられて、ロボット、サーバー、ラジオなどに変身できます。"
-"<b>world.kano.me/projects</b>で素晴らしいアイディアが載っています。"
-"Kano本社の中を見たいですか？<b>blog.kano.me</b>でKanoの魔法使いにお会い"
-"出来ます。"
+"\"Kano\"と言う名前の由来は、嘉納治五郎(かのうじごろう)から来ています。日本の"
+"先生で「柔道の父」と呼ばれています。彼のモットーは：「精力善用」で心身の持つ"
+"すべての力を最大限に生かして、社会のために善い方向に用いると言う意味です。ま"
+"た、ギリシャ語でKanoは「私が作る」と言う意味です。（Kanoは北ニジェリアの市場"
+"大きい街でもあるのす）。Kanoは他のコンピューターとどう違うのでしょう？Kanoの"
+"頭脳にある全てのアイディアは完全に公開されています。<b>github.com/"
+"KanoComputing</b>に行けば、Kanoのソースコードが見られます。そしてKanoは形を変"
+"えられて、ロボット、サーバー、ラジオなどに変身できます。<b>world.kano.me/"
+"projects</b>で素晴らしいアイディアが載っています。Kano本社の中を見たいです"
+"か？<b>blog.kano.me</b>でKanoの魔法使いにお会い出来ます。"
 
 #: ../kano_updater/ui/stage_text.py:83
 msgid ""
@@ -462,13 +466,13 @@ msgid ""
 "Station also uses to run its robotic systems — to keep the astronauts from "
 "losing their lunch!"
 msgstr ""
-"Kano OSはオペレーティング・システムで、全てのプログラムをお互いと接続して"
-"います。このOSはLinuxに基づいていて、オープンソースになっています。つまり、"
-"誰でもが自由にダウンロードや修正でき、売ることもできます。このコードはプロ"
-"だけでなく、世界中の多くのアマチュアやメーカーが協力して書いています。"
-"KanoはDebianと言うLinuxの面白いディストリビューション（配布パッケージ）を"
-"使っていて、国際宇宙ステーションのロボットシステムで宇宙飛行士のお世話をする"
-"為にも使われています。"
+"Kano OSはオペレーティング・システムで、全てのプログラムをお互いと接続していま"
+"す。このOSはLinuxに基づいていて、オープンソースになっています。つまり、誰でも"
+"が自由にダウンロードや修正でき、売ることもできます。このコードはプロだけでな"
+"く、世界中の多くのアマチュアやメーカーが協力して書いています。KanoはDebianと"
+"言うLinuxの面白いディストリビューション（配布パッケージ）を使っていて、国際宇"
+"宙ステーションのロボットシステムで宇宙飛行士のお世話をする為にも使われていま"
+"す。"
 
 #: ../kano_updater/ui/stage_text.py:94
 msgid ""
@@ -477,11 +481,10 @@ msgid ""
 "more. Your computer is open, and its powers are at your command. If you want "
 "to get new cool projects from us each week, join the community at"
 msgstr ""
-"もう少しで終わりです！あなたのKanoコンピューターでは面白いゲームや音楽を作り、"
-"家でビデオを見たり、ストーリーを語ったりすることが出来るのです。あなたの"
-"コンピューターは完全にオープンで、その力を制御できます。"
-"面白い新しいプロジェクトを毎週手に入れるには、コミュニティーにこちらから"
-"参加してみよう。"
+"もう少しで終わりです！あなたのKanoコンピューターでは面白いゲームや音楽を作"
+"り、家でビデオを見たり、ストーリーを語ったりすることが出来るのです。あなたの"
+"コンピューターは完全にオープンで、その力を制御できます。面白い新しいプロジェ"
+"クトを毎週手に入れるには、コミュニティーにこちらから参加してみよう。"
 
 #: ../kano_updater/ui/stage_text.py:101
 msgid ""
